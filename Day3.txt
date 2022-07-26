@@ -1,0 +1,180 @@
+<html>
+
+<head>
+<title>Welcome to Home page</title>
+<style>
+p
+{
+	color:yellow;
+	background-color: steelblue;
+	border:3px solid red
+}
+
+.mycls
+{
+	
+	background-color: tomato;
+	border:3px dotted blue
+}
+
+</style>
+</head>
+
+
+<body leftmargin=200px>
+<header>
+<h1>Online Food App...</h1>
+<img src="foodbanner.jpg" width=90% height=200px></img>
+</header>
+
+
+<nav>
+<a href="foodhome.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="login.html">Login</a>
+<a href="menu.html">Menu</a>
+<a href="gallary.html">Gallary</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<article>
+
+<script>
+
+	function Addcomments()
+	{
+		//d1.innerHtml= "some content goes here";
+		//document.getElementById("d1").innerHTML= "some content goes here"
+
+		var a = document.getElementById("d1");
+
+		var t = document.createElement("p");  // <p></p>
+		var c = document.createTextNode= t1.value;    //  helloworld  
+        t.append(c);  // <p>hello world</p>
+         a.append(t);
+
+         
+	}
+	function removecomments()
+	{
+
+		var a = document.getElementById("d1");
+		//a.removeChild(a.lastChild);
+		a.removeChild(a.childNodes[0]);
+
+
+	}
+
+
+	function addproperties()
+	{
+        var a = document.getElementById("d1");
+		a.setAttribute("class","mycls") // <div class="mycls">
+			
+
+	}
+
+	function removeproperties()
+	{
+		var a = document.getElementById("d1");
+		a.removeAttribute("class") // <div>
+			
+	}
+
+	function hideallcomments()
+	{
+		var a = document.getElementById("d1");
+		a.hidden=true
+	}
+
+	function showllcomments()
+	{
+		var a = document.getElementById("d1");
+		a.hidden=false;
+
+	}
+
+
+	c=0
+	function changeimage()
+	{
+		c=c+1;
+		if(c==1)
+		{
+		var a = document.getElementById("im1");
+          a.src="images/b.jpg"
+		}
+
+		if(c==2)
+		{
+		var a = document.getElementById("im1");
+          a.src="images/c.jpg"
+		}
+
+		if(c==3)
+		{
+		var a = document.getElementById("im1");
+          a.src="images/d.jpg"
+		}
+		if(c==4)
+		{
+	     c=0;
+		}
+	}
+
+
+
+	function createwin()
+	{
+		 var a= window.open("",'','height=200px;width=200px;scroll=no;location=no');
+		 a.document.write("hello world")
+		 a.document.write("<h1>My heading goes here</h1><hr> contet goes here")
+	}
+
+	function closewin()
+	{
+		 a.close();
+	}
+
+	
+
+
+ //  setInterval(changeimage,1000	)
+
+</script>
+
+
+
+
+
+<textarea id="t1" rows=5 cols=100>
+
+
+</textarea>
+<input type="button" value="publish" onclick="Addcomments()"/>
+<input type="button" value="removecomments" onclick="removecomments()"/>
+<input type="button" value="Add Properties" onclick="addproperties()"/>
+<input type="button" value="Remove Property" onclick="removeproperties()"/>
+<input type="button" value="Hide Div" onclick="hideallcomments()"/>
+<input type="button" value="Show Div" onclick="showllcomments()"/>
+<input type="button" value="change image" onclick="changeimage()"/>
+<input type="button" value="Create window" onclick="createwin()"/>
+<input type="button" value="close window" onclick="closewin()"/>
+<div id="d1">
+
+</div>
+
+<img id="im1" src="images/a.png">
+</article>
+
+
+<footer>
+
+
+</footer>
+
+
+
+</body>
+
+<html>

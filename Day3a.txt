@@ -1,0 +1,132 @@
+<script>
+
+function drawrectangle()
+{
+
+var a = document.getElementById("c1");
+var c2 = a.getContext("2d"); 
+ c2.fillStyle="blue";
+ c2.fillRect(50,50,30,30); // x  y   height  width
+}
+
+function strokerectangle()
+{
+
+var a = document.getElementById("c1");
+var c2 = a.getContext("2d"); 
+c2.lineWidth=2
+ c2.strokeStyle="red";
+ c2.strokeRect(50,50,30,30); // x  y   height  width
+}
+
+function drawline()
+{
+
+var a = document.getElementById("c1");
+var c2 = a.getContext("2d"); 
+c2.strokeStyle="red";
+c2.lineWidth =1
+c2.moveTo(50,20);  // x and y cor
+c2.lineTo(700,400);  // space  and length
+c2.stroke(); // action will be performed
+
+
+}
+
+function drawtext()
+{
+    var c = document.getElementById("c1");
+ 
+ var can1 = c.getContext("2d"); 
+ 
+ can1.font = "italic 20px sans-serif";
+ 
+ can1.fillStyle="red";
+ can1.fillText("HTML5 Rocks!!",10,50);
+
+
+}
+function stroketext()
+{
+    var c = document.getElementById("c1"); 
+ var can1 = c.getContext("2d"); 
+ can1.font = "italic 30px Arial";
+  can1.strokeText("HTML5 Rocks!!",10,50);
+
+}
+function CreateCircle()
+{
+var c = document.getElementById("c1");
+ 
+var can1 = c.getContext("2d"); 
+
+
+
+
+//var cx = c.width /2;
+//var ch = c.height / 2;
+ //var r = 50;
+var d = 450;
+var radiant = (Math.PI/180) * d;
+can1.arc(100,100, 50,0, Math.PI * 2,false);
+can1.fillStyle="green";  // fill color
+can1.fill();
+can1.lineWidth=8;
+can1.strokeStyle="red";  // border color
+can1.stroke();
+}
+
+
+function clearrectangle()
+{
+
+var a = document.getElementById("c1");
+var c2 = a.getContext("2d"); 
+ 
+ c2.clearRect(50,50,10,10); // x  y   height  width
+}
+
+</script>
+
+<canvas id="c1" style="height:500px ;width:500x;border:3px solid blue;">
+
+
+
+</canvas>
+
+<br><br>
+<input type="button" value="Rectangle"  onclick="drawrectangle()">
+<input type="button" value="strokerectangle" onclick="strokerectangle()">
+<input type="button" value="line" onclick="drawline()">
+<input type="button" value="text" onclick="drawtext()">
+<input type="button" value="stroketext" onclick="stroketext()">
+<input type="button" value="circle" onclick="CreateCircle()">
+<input type="button" value="clearRectangle" onclick="clearrectangle()">
+
+
+
+
+===========================================================
+
+<script>
+function play1(path)
+{
+    var a = document.getElementById("v1")
+    a.src=path
+    a.play();
+}
+
+</script>
+<video src="test.mp4" id="v1"></video>
+    <img src="images/a.png" onclick="play1('test.mp4')">
+    <img src="images/b.jpg" onclick="play1('kiki.mp4')">
+    
+    
+    
+    
+    
+    
+    
+
+
+</article>
